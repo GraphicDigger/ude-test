@@ -3,7 +3,7 @@ import { Button } from './Button';
 
 // Функция для отправки данных родителю
 const sendParentMessage = (type: string, payload: any) => {
-  const targetOrigin = 'http://localhost:3000'; // В продакшне используйте конкретный origin
+  const targetOrigin = 'https://localhost:3000'; // В продакшне используйте конкретный origin
   console.log('[App] Отправка сообщения:', { type, payload });
   
   if (window.parent && window.parent !== window) {
