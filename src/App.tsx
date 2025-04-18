@@ -7,7 +7,8 @@ const sendParentMessage = (type: string, payload: any) => {
   console.log('[App] Отправка сообщения:', { type, payload });
   
   if (window.parent && window.parent !== window) {
-    window.parent.postMessage({ type, payload }, targetOrigin);
+    // window.parent.postMessage({ type, payload }, targetOrigin);
+    window.parent.postMessage({ type: 'PING' }, targetOrigin);
   } else {
     console.warn('[App] window.parent недоступен');
   }
