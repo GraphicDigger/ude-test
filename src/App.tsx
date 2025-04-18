@@ -94,7 +94,12 @@ const App = () => {
   
   // При монтировании компонента
   useEffect(() => {
-    console.log('[App] Компонент App смонтирован');
+    console.log('[App] window.parent:', window.parent);
+        try {
+            console.log('[App] window.parent.origin:', window.parent.origin);
+        } catch (e) {
+            console.error('[App] Не удалось получить window.parent.origin:', e);
+        }
     
     // Сообщаем родителю, что iframe готов
     sendParentMessage('IFRAME_READY', { url: window.location.href });
