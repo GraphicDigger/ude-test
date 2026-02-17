@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from './shared/theme/model/context/context';
 
-export const Button = (props) => {
+export const Button = (_props: Record<string, unknown>) => {
+  const theme = useContext(ThemeContext);
+  const bg = theme?.colors?.primary ?? '#007AFF';
+  const fg = theme?.colors?.primaryText ?? '#FFFFFF';
+
   return (
     <div 
       data-node-id="screen-canvas-09_button-component"
@@ -13,7 +18,7 @@ export const Button = (props) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#FFFFFF",
+        backgroundColor: theme?.colors?.background ?? "#FFFFFF",
         flexDirection: "column"
       }}
     >
@@ -30,10 +35,10 @@ export const Button = (props) => {
           justifyContent: "center",
           width: "max-content",
           height: "40px",
-          backgroundColor: "#007AFF",
+          backgroundColor: bg,
           borderRadius: "8px",
           padding: "0 16px",
-          color: "#FFFFFF",
+          color: fg,
           fontSize: "14px",
           lineHeight: "1"
         }}
