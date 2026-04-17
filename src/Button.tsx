@@ -52,7 +52,7 @@ export const Button = (_props: Record<string, unknown>) => {
             width: "16px",
             height: "16px",
             borderRadius: "50%",
-            backgroundColor: "#FFFFFF"
+            backgroundColor: theme?.colors?.background 
           }}
         ></div>
       </div>
