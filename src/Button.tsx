@@ -18,7 +18,7 @@ export const Button = (_props: Record<string, unknown>) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: theme?.colors?.background ?? "#FFFFFF",
+        // backgroundColor: theme?.colors?.background ?? "#FFFFFF",
         flexDirection: "column"
       }}
     >
@@ -35,7 +35,7 @@ export const Button = (_props: Record<string, unknown>) => {
           justifyContent: "center",
           width: "max-content",
           height: "40px",
-          backgroundColor: bg,
+          // backgroundColor: bg,
           borderRadius: "8px",
           padding: "0 16px",
           color: fg,
