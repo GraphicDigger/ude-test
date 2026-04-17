@@ -7,7 +7,7 @@ export const Button = (_props: Record<string, unknown>) => {
   const fg = theme?.colors?.primaryText ?? '#FFFFFF';
 
   return (
-    <div 
+    <div
       data-node-id="screen-canvas-09_button-component"
       data-kind="canvas"
       data-name="Canvas"
@@ -41,8 +41,7 @@ export const Button = (_props: Record<string, unknown>) => {
           color: fg,
           fontSize: "14px",
           lineHeight: "1"
-        }}
-      >
+        }}>
         Login
         <div
           data-node-id="element-01-simple"
@@ -55,7 +54,7 @@ export const Button = (_props: Record<string, unknown>) => {
             borderRadius: "50%",
             backgroundColor: "#FFFFFF"
           }}
-        />
+        ></div>
       </div>
     </div>
   );
