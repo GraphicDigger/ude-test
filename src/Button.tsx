@@ -43,19 +43,19 @@ export const Button = (_props: Record<string, unknown>) => {
           lineHeight: "1"
         }}>
         TestDrive
-        <div
-          data-node-id="element-01-simple"
-          data-kind="element"
-          data-name="Simple"
-          data-component-id="element-00-button"
-          style={{
-            width: "16px",
-            height: "16px",
-            borderRadius: "50%",
-            backgroundColor: theme?.colors?.background 
-          }}
-        ></div>
       </div>
+      <div
+        data-node-id="element-01-simple"
+        data-kind="element"
+        data-name="Simple"
+        data-component-id="element-00-button"
+        style={{
+          width: "16px",
+          height: "16px",
+          borderRadius: "50%",
+          backgroundColor: theme?.colors?.background
+        }}
+      ></div>
     </div>
   );
 };
