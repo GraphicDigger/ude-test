@@ -1,11 +1,11 @@
 import { ref } from './ref';
+import { sys } from './sys';
 
 export const lightTheme = {
   name: 'light',
   colors: {
     ...ref,
-    background: ref.white,
-    text: ref.black,
+    ... sys,
   },
 };
 
@@ -13,7 +13,6 @@ export const darkTheme = {
   name: 'dark',
   colors: {
     ...ref,
-    background: ref.black,
-    text: ref.white,
+    ...sys,
   },
 };
