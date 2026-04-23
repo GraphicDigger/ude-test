@@ -3,8 +3,8 @@ import { ThemeContext } from './shared/theme/model/context/context';
 
 export const Button = (_props: Record<string, unknown>) => {
   const theme = useContext(ThemeContext);
-  const bg = theme?.colors?.background ?? '#007AFF';
-  const fg = theme?.colors?.primaryText ?? '#FFFFFF';
+  const btnColor = theme?.colors?.sys?.primary ?? '#007AFF';
+  const btnTextColor = theme?.colors?.sys?.onPrimary ?? '#FFFFFF';
 
   return (
     <div
@@ -18,7 +18,7 @@ export const Button = (_props: Record<string, unknown>) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: theme?.colors?.background ?? "#FFFFFF",
+        backgroundColor: theme?.colors?.sys?.surface ?? "#FFFFFF",
         flexDirection: "column"
       }}
     >
@@ -35,10 +35,10 @@ export const Button = (_props: Record<string, unknown>) => {
           justifyContent: "center",
           width: "max-content",
           height: "40px",
-          backgroundColor: bg,
+          backgroundColor: btnColor,
           borderRadius: "8px",
           padding: "0 16px",
-          color: fg,
+          color: btnTextColor,
           fontSize: "14px",
           lineHeight: "1"
         }}>
@@ -53,7 +53,7 @@ export const Button = (_props: Record<string, unknown>) => {
           width: "16px",
           height: "16px",
           borderRadius: "50%",
-          backgroundColor: theme?.colors?.background
+          backgroundColor: theme?.colors?.sys?.surface
         }}
       ></div>
     </div>
