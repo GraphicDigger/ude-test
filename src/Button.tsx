@@ -3,7 +3,7 @@ import { ThemeContext } from './shared/theme/model/context/context';
 
 export const Button = (_props: Record<string, unknown>) => {
   const theme = useContext(ThemeContext);
-  const btnColor = theme?.colors?.sys?.primary ?? '#007AFF';
+  const btnColor = theme?.colors?.sys?.primary ?? '#999999';
   const btnTextColor = theme?.colors?.sys?.onPrimary ?? '#111111';
 
   return (
