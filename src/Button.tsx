@@ -13,8 +13,8 @@ export const Button = (_props: Record<string, unknown>) => {
       data-name="Canvas"
       data-component-id="button-component-new"
       style={{
-        width: "500px",
-        height: "500px",
+        width: "100%",
+        height: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -43,19 +43,18 @@ export const Button = (_props: Record<string, unknown>) => {
           lineHeight: "1"
         }}>
         TestDrive
+        <div
+          data-node-id="element-01-simple"
+          data-kind="element"
+          data-name="Simple"
+          data-component-id="element-00-button"
+          style={{
+            width: "16px",
+            height: "16px",
+            borderRadius: "50%",
+            backgroundColor: theme?.colors?.sys?.surface
+          }}></div>
       </div>
-      <div
-        data-node-id="element-01-simple"
-        data-kind="element"
-        data-name="Simple"
-        data-component-id="element-00-button"
-        style={{
-          width: "16px",
-          height: "16px",
-          borderRadius: "50%",
-          backgroundColor: theme?.colors?.sys?.surface
-        }}
-      ></div>
     </div>
   );
 };
