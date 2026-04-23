@@ -4,7 +4,7 @@ import { ThemeContext } from './shared/theme/model/context/context';
 export const Button = (_props: Record<string, unknown>) => {
   const theme = useContext(ThemeContext);
   const btnColor = theme?.colors?.sys?.primary ?? '#007AFF';
-  const btnTextColor = theme?.colors?.sys?.onPrimary ?? '#FFFFFF';
+  const btnTextColor = theme?.colors?.sys?.onPrimary ?? '#111111';
 
   return (
     <div
@@ -35,7 +35,7 @@ export const Button = (_props: Record<string, unknown>) => {
           justifyContent: "center",
           width: "max-content",
           height: "40px",
-          backgroundColor: theme?.colors?.sys?.primary ,
+          backgroundColor: btnColor,
           borderRadius: "8px",
           padding: "0 16px",
           color: btnTextColor,
