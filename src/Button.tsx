@@ -35,7 +35,7 @@ export const Button = (_props: Record<string, unknown>) => {
           justifyContent: "center",
           width: "max-content",
           height: "40px",
-          backgroundColor: btnColor,
+          backgroundColor: theme?.colors?.sys?.primary ,
           borderRadius: "8px",
           padding: "0 16px",
           color: btnTextColor,
