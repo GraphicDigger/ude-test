@@ -16,14 +16,14 @@ export const Button = (_props: Record<string, unknown>) => {
         width: "100%",
         height: "100%",
         display: "flex",
+        flexDirection: "column",
+        gap: "24px",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: theme?.colors?.sys?.surface ?? "#FFFFFF",
-        flexDirection: "column",
-        gap: "24px",
       }}
     >
-      <p style={{color: "#000000"}}>Your focus determines your reality</p>
+      <p style={{ color: "#000000" }}>Your focus determines your reality</p>
       <div
         data-node-id="element-00-button"
         data-kind="element"
@@ -44,7 +44,9 @@ export const Button = (_props: Record<string, unknown>) => {
           fontSize: "14px",
           lineHeight: "1"
         }}>
-        Agree
+        <p style={{ color: "#000000" }}>Your focus determines your reality</p>
+
+        {/* Agree */}
         <div
           data-node-id="element-01-simple"
           data-kind="element"
