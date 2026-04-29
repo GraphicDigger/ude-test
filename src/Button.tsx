@@ -19,10 +19,12 @@ export const Button = (_props: Record<string, unknown>) => {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: theme?.colors?.sys?.surface ?? "#FFFFFF",
-        flexDirection: "column"
+        flexDirection: "column",
+        gap: "24px",
       }}
     >
-      <div
+      <p>Your focus determines your reality</p>
+      <button
         data-node-id="element-00-button"
         data-kind="element"
         data-name="Button"
@@ -42,7 +44,7 @@ export const Button = (_props: Record<string, unknown>) => {
           fontSize: "14px",
           lineHeight: "1"
         }}>
-        TestDrive
+        Agree
         <div
           data-node-id="element-01-simple"
           data-kind="element"
@@ -54,7 +56,8 @@ export const Button = (_props: Record<string, unknown>) => {
             borderRadius: "50%",
             backgroundColor: theme?.colors?.sys?.surface
           }}></div>
-      </div>
+      </button>
+
     </div>
   );
 };
