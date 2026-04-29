@@ -23,7 +23,7 @@ export const Button = (_props: Record<string, unknown>) => {
         gap: "24px",
       }}
     >
-      <p style={{color: "#000000"}}>Your focus determines your reality</p>
+      {/* <p style={{color: "#000000"}}>Your focus determines your reality</p> */}
       <div
         data-node-id="element-00-button"
         data-kind="element"
