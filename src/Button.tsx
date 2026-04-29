@@ -44,9 +44,7 @@ export const Button = (_props: Record<string, unknown>) => {
           fontSize: "14px",
           lineHeight: "1"
         }}>
-        <p style={{ color: "#000000" }}>Your focus determines your reality</p>
-
-        {/* Agree */}
+        Agree
         <div
           data-node-id="element-01-simple"
           data-kind="element"
