@@ -30,10 +30,8 @@ export const Footer = () => {
   const theme = useContext(ThemeContext);
   return (
     <footer
-      data-node-id="multi-footer-root"
       data-kind="canvas"
       data-name="Footer"
-      data-component-id="multi-footer-component"
       style={{
         width: "100%",
         padding: "12px",
@@ -58,10 +56,8 @@ export const LoginForm = () => {
 
   return (
     <div
-      data-node-id="multi-login-form-root"
       data-kind="canvas"
       data-name="LoginForm"
-      data-component-id="multi-login-form-component"
       style={{
         width: "100%",
         display: "flex",
@@ -72,7 +68,6 @@ export const LoginForm = () => {
         backgroundColor: surface,
         color: onSurface,
         fontSize: "14px",
-        maxWidth: "420px",
       }}
     >
       <h2
