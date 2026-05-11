@@ -1,26 +1,18 @@
 import { ref } from './ref';
+import { sys } from './sys';
 import { typography } from './typography';
 
-// Inline nested structure под `theme.colors.<collection>.<token>` paths,
-// которые ожидает tokenRef builder (Case 1, theme-detected scope).
-// shorthand `{ ref, sys }` НЕ работает — extractor видит Identifier, не
-// ObjectExpression. Нужны inline-объекты с явными полями.
+// FLAT-SPREAD структура: `colors: { ...ref, ...sys }`. Critical для
+// buildThemeFromTokenStore — extractor сохраняет spreadNames=['ref', 'sys']
+// на коллекции `colors`, что при материализации создаёт виртуальный
+// `theme.colors.ref` / `theme.colors.sys` доступ (без физического копирования
+// токенов). Это и есть source-of-truth path, который ожидает tokenRef Case 1.
 
 export const lightTheme = {
   name: 'light',
   colors: {
-    ref: {
-      white: ref.white,
-      black: ref.black,
-      blue: ref.blue,
-      size: ref.size,
-    },
-    sys: {
-      surface: ref.white,
-      onSurface: ref.black,
-      primary: ref.blue,
-      onPrimary: ref.white,
-    },
+    ...ref,
+    ...sys,
   },
   typography,
 };
@@ -28,18 +20,8 @@ export const lightTheme = {
 export const darkTheme = {
   name: 'dark',
   colors: {
-    ref: {
-      white: ref.white,
-      black: ref.black,
-      blue: ref.blue,
-      size: ref.size,
-    },
-    sys: {
-      surface: ref.black,
-      onSurface: ref.white,
-      primary: ref.blue,
-      onPrimary: ref.white,
-    },
+    ...ref,
+    ...sys,
   },
   typography,
 };
