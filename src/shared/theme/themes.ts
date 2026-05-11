@@ -2,17 +2,18 @@ import { ref } from './ref';
 import { sys } from './sys';
 import { typography } from './typography';
 
-// Структура theme.colors совпадает с тем, что Button.tsx и Screen*.tsx уже
-// читают: `theme?.colors?.sys?.primary` etc. Раньше colors был FLAT spread
-// (`{ ...ref, ...sys }`), и эти пути падали в `?? fallback` runtime. Также
-// это структура, которую ожидает write-path tokenRef builder:
-// `theme.colors.<collectionName>.<tokenName>` (см. `tokenRef.ts` case 1).
+const colorRefs = {
+  white: ref.white,
+  black: ref.black,
+  blue: ref.blue,
+  size: ref.size,
+};
 
 export const lightTheme = {
   name: 'light',
   colors: {
-    ref,
-    sys,
+    ...colorRefs,
+    ...sys,
   },
   typography,
 };
@@ -20,8 +21,8 @@ export const lightTheme = {
 export const darkTheme = {
   name: 'dark',
   colors: {
-    ref,
-    sys,
+    ...colorRefs,
+    ...sys,
   },
   typography,
 };
