@@ -25,7 +25,8 @@ export const Button = (_props: Record<string, unknown>) => {
           padding: "0 16px",
           color: btnTextColor,
           fontSize: "14px",
-          lineHeight: "1"
+          lineHeight: "1",
+          border: "none"
         }}>
         Your focus determines your reality
         <div
