@@ -7,24 +7,7 @@ export const Button = (_props: Record<string, unknown>) => {
   const btnTextColor = theme?.colors?.sys?.onPrimary ?? '#111111';
 
   return (
-    <div
-      data-node-id="screen-canvas-09_button-component"
-      data-kind="canvas"
-      data-name="Canvas"
-      data-component-id="button-component-new"
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        gap: "24px",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: theme?.colors?.sys?.surface ?? "#FFFFFF",
-      }}
-    >
-      <p style={{ color: "#000000" }}>Your focus determines your reality</p>
-      <div
+      <button
         data-node-id="element-00-button"
         data-kind="element"
         data-name="Button"
@@ -44,7 +27,7 @@ export const Button = (_props: Record<string, unknown>) => {
           fontSize: "14px",
           lineHeight: "1"
         }}>
-        Agree
+        Your focus determines your reality
         <div
           data-node-id="element-01-simple"
           data-kind="element"
@@ -56,8 +39,6 @@ export const Button = (_props: Record<string, unknown>) => {
             borderRadius: "50%",
             backgroundColor: theme?.colors?.sys?.surface
           }}></div>
-      </div>
-
-    </div>
+      </button>
   );
 };
