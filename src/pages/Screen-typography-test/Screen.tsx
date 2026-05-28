@@ -1,10 +1,6 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../../shared/theme/model/context/context';
+import { sys, typography } from '../../shared/theme';
 
 export default function ScreenTypographyTest() {
-  const theme = useContext(ThemeContext);
-  const typography = theme?.typography ?? {};
-
   return (
     <div
       id="canvas"
@@ -15,8 +11,8 @@ export default function ScreenTypographyTest() {
         flexDirection: 'column',
         gap: '32px',
         padding: '48px',
-        backgroundColor: theme?.colors?.surface ?? '#FFFFFF',
-        color: theme?.colors?.onSurface ?? '#111111',
+        backgroundColor: sys.color.surface,
+        color: sys.color.onSurface,
       }}
     >
       <h1 style={{ fontSize: '24px', fontWeight: 700 }}>Typography preset test fixtures</h1>
@@ -36,11 +32,11 @@ export default function ScreenTypographyTest() {
       <p
         data-test="element-b-refs"
         style={{
-          fontFamily: typography?.body?.fontFamily,
-          fontSize: typography?.body?.fontSize,
-          fontWeight: typography?.body?.fontWeight,
-          lineHeight: typography?.body?.lineHeight,
-          color: theme?.colors?.onSurface,
+          fontFamily: typography.body.fontFamily,
+          fontSize: typography.body.fontSize,
+          fontWeight: typography.body.fontWeight,
+          lineHeight: typography.body.lineHeight,
+          color: sys.color.onSurface,
         }}
       >
         Element B — all token references. Capture должен сохранить TokenReference объекты,
@@ -50,7 +46,7 @@ export default function ScreenTypographyTest() {
       <p
         data-test="element-c-mixed"
         style={{
-          fontSize: typography?.body?.fontSize,
+          fontSize: typography.body.fontSize,
           fontWeight: 400,
           lineHeight: '24px',
           color: '#111111',

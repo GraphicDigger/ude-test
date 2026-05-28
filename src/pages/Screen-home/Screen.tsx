@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../shared/theme/model/context/context';
+import React from 'react';
+import { sys } from '../../shared/theme';
 
 export default function ScreenHome() {
-  const theme = useContext(ThemeContext);
   return (
     <div
       id="canvas"
@@ -14,8 +13,8 @@ export default function ScreenHome() {
         gap: '24px',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme?.colors?.sys?.surface ?? '#FFFFFF',
-        color: theme?.colors?.sys?.onSurface ?? '#111111',
+        backgroundColor: sys.color.surface,
+        color: sys.color.onSurface,
       }}
     >
       <h1 style={{ fontSize: '32px', fontWeight: '700' }}>Home</h1>

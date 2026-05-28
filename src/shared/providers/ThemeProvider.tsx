@@ -1,11 +1,11 @@
 import React from 'react';
-import { ThemeContext } from '../theme';
-import { lightTheme } from '../theme/themes';
 
+/**
+ * Pass-through wrapper. CSS-vars (`tokens.css`) применяются через `:root` /
+ * `[data-theme="..."]` атрибуты — runtime React context не нужен. Файл
+ * сохранён как точка управления theme-switching (toggle `data-theme` на
+ * `<html>` для смены active mode).
+ */
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <ThemeContext.Provider value={lightTheme}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <>{children}</>;
 };

@@ -1,0 +1,35 @@
+/* Design tokens — CSS-vars source of truth для UDE multi-mode editing.
+ *
+ * Структура (M3-inspired, оптимизированная):
+ *  - ref tier (`--ref-color-*`): primitives, single-mode (только :root).
+ *  - sys tier (`--sys-*`): semantic, multi-mode (:root/light + [data-theme="dark"]/dark).
+ *
+ * Typography / spacing / breakpoints — в `sys.ts` как JS-constants (они не
+ * multi-mode и не требуют CSS-vars).
+ */
+
+:root {
+  /* ref — primitives, single-mode, shared light/dark */
+  --ref-color-white: #ffffff;
+  --ref-color-black: #000000;
+  --ref-color-blue: #007aff;
+  --ref-color-grey-10: #1d1b20;
+  --ref-color-grey-95: #fafafa;
+}
+
+:root,
+[data-theme='light'] {
+  /* sys — semantic, light mode */
+  --sys-surface: var(--ref-color-white);
+  --sys-onSurface: var(--ref-color-black);
+  --sys-primary: var(--ref-color-blue);
+  --sys-onPrimary: var(--ref-color-white);
+}
+
+[data-theme='dark'] {
+  /* sys — semantic, dark mode */
+  --sys-surface: var(--ref-color-grey-10);
+  --sys-onSurface: var(--ref-color-grey-95);
+  --sys-primary: var(--ref-color-blue);
+  --sys-onPrimary: var(--ref-color-white);
+}
