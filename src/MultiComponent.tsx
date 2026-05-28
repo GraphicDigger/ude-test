@@ -1,7 +1,10 @@
-import React from 'react';
-import { sys } from './shared/theme';
+import React, { useContext } from 'react';
+import { ThemeContext } from './shared/theme/model/context/context';
 
 export const Header = () => {
+  const theme = useContext(ThemeContext);
+  const surface = theme?.sys?.surface ?? '#FFFFFF';
+  const onSurface = theme?.sys?.onSurface ?? '#111111';
   return (
     <header
       data-node-id="multi-header-root"
@@ -14,8 +17,8 @@ export const Header = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: sys.color.surface,
-        color: sys.color.onSurface,
+        backgroundColor: surface,
+        color: onSurface,
         fontSize: "20px",
         fontWeight: "700",
       }}
@@ -26,6 +29,9 @@ export const Header = () => {
 };
 
 export const Footer = () => {
+  const theme = useContext(ThemeContext);
+  const surface = theme?.sys?.surface ?? '#EEEEEE';
+  const onSurface = theme?.sys?.onSurface ?? '#666666';
   return (
     <footer
       data-kind="canvas"
@@ -36,8 +42,8 @@ export const Footer = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: sys.color.surface,
-        color: sys.color.onSurface,
+        backgroundColor: surface,
+        color: onSurface,
         fontSize: "14px",
       }}
     >
@@ -47,6 +53,12 @@ export const Footer = () => {
 };
 
 export const LoginForm = () => {
+  const theme = useContext(ThemeContext);
+  const surface = theme?.sys?.surface ?? "#FFFFFF";
+  const onSurface = theme?.sys?.onSurface ?? "#111111";
+  const primary = theme?.sys?.primary ?? "#007AFF";
+  const onPrimary = theme?.sys?.onPrimary ?? "#FFFFFF";
+
   return (
     <div
       data-kind="canvas"
@@ -58,8 +70,8 @@ export const LoginForm = () => {
         gap: "16px",
         padding: "32px",
         alignItems: "stretch",
-        backgroundColor: sys.color.surface,
-        color: sys.color.onSurface,
+        backgroundColor: surface,
+        color: onSurface,
         fontSize: "14px",
       }}
     >
@@ -85,7 +97,7 @@ export const LoginForm = () => {
           flexDirection: "column",
           gap: "4px",
           fontSize: "12px",
-          color: sys.color.onSurface,
+          color: onSurface,
         }}
       >
         Email
@@ -101,10 +113,10 @@ export const LoginForm = () => {
             height: "40px",
             padding: "0 12px",
             border: "1px solid #DDDDDD",
-            borderRadius: sys.radius.md,
+            borderRadius: "8px",
             fontSize: "14px",
             backgroundColor: "#FFFFFF",
-            color: sys.color.onSurface,
+            color: onSurface,
           }}
         />
       </label>
@@ -118,7 +130,7 @@ export const LoginForm = () => {
           flexDirection: "column",
           gap: "4px",
           fontSize: "12px",
-          color: sys.color.onSurface,
+          color: onSurface,
         }}
       >
         Password
@@ -134,10 +146,10 @@ export const LoginForm = () => {
             height: "40px",
             padding: "0 12px",
             border: "1px solid #DDDDDD",
-            borderRadius: sys.radius.md,
+            borderRadius: "8px",
             fontSize: "14px",
             backgroundColor: "#FFFFFF",
-            color: sys.color.onSurface,
+            color: onSurface,
           }}
         />
       </label>
@@ -152,7 +164,7 @@ export const LoginForm = () => {
           alignItems: "center",
           gap: "8px",
           fontSize: "13px",
-          color: sys.color.onSurface,
+          color: onSurface,
           cursor: "pointer",
         }}
       >
@@ -166,7 +178,7 @@ export const LoginForm = () => {
             width: "16px",
             height: "16px",
             margin: "0",
-            accentColor: sys.color.primary,
+            accentColor: primary,
           }}
         />
         Remember me
@@ -181,7 +193,7 @@ export const LoginForm = () => {
           flexDirection: "column",
           gap: "4px",
           fontSize: "12px",
-          color: sys.color.onSurface,
+          color: onSurface,
         }}
       >
         Bio (optional)
@@ -195,10 +207,10 @@ export const LoginForm = () => {
             width: "100%",
             padding: "8px 12px",
             border: "1px solid #DDDDDD",
-            borderRadius: sys.radius.md,
+            borderRadius: "8px",
             fontSize: "14px",
             backgroundColor: "#FFFFFF",
-            color: sys.color.onSurface,
+            color: onSurface,
             resize: "vertical",
           }}
         />
@@ -213,10 +225,10 @@ export const LoginForm = () => {
           width: "100%",
           height: "44px",
           marginTop: "8px",
-          backgroundColor: sys.color.primary,
-          color: sys.color.onPrimary,
+          backgroundColor: primary,
+          color: onPrimary,
           border: "none",
-          borderRadius: sys.radius.md,
+          borderRadius: "8px",
           fontSize: "14px",
           fontWeight: "600",
           cursor: "pointer",

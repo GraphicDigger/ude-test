@@ -1,7 +1,8 @@
-import React from 'react';
-import { sys } from '../../shared/theme';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../shared/theme/model/context/context';
 
 export default function ScreenAbout() {
+  const theme = useContext(ThemeContext);
   return (
     <div
       id="canvas"
@@ -14,8 +15,8 @@ export default function ScreenAbout() {
         justifyContent: 'center',
         alignItems: 'flex-start',
         padding: '64px',
-        backgroundColor: sys.color.surface,
-        color: sys.color.onSurface,
+        backgroundColor: theme?.sys?.surface ?? '#FFFFFF',
+        color: theme?.sys?.onSurface ?? '#111111',
       }}
     >
       <h1 style={{ fontSize: '28px', fontWeight: '700' }}>About</h1>
@@ -25,10 +26,10 @@ export default function ScreenAbout() {
       <button
         style={{
           padding: '12px 20px',
-          backgroundColor: sys.color.primary,
-          color: sys.color.onPrimary,
+          backgroundColor: theme?.sys?.primary ?? '#3B82F6',
+          color: theme?.sys?.onPrimary ?? '#FFFFFF',
           border: 'none',
-          borderRadius: sys.radius.md,
+          borderRadius: '8px',
           cursor: 'pointer',
           fontSize: '14px',
           fontWeight: '600',

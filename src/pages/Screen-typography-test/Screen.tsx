@@ -1,6 +1,10 @@
-import { sys, typography } from '../../shared/theme';
+import { useContext } from 'react';
+import { ThemeContext } from '../../shared/theme/model/context/context';
+import { typography } from '../../shared/theme/typography';
 
 export default function ScreenTypographyTest() {
+  const theme = useContext(ThemeContext);
+
   return (
     <div
       id="canvas"
@@ -11,8 +15,8 @@ export default function ScreenTypographyTest() {
         flexDirection: 'column',
         gap: '32px',
         padding: '48px',
-        backgroundColor: sys.color.surface,
-        color: sys.color.onSurface,
+        backgroundColor: theme?.sys?.surface ?? '#FFFFFF',
+        color: theme?.sys?.onSurface ?? '#111111',
       }}
     >
       <h1 style={{ fontSize: '24px', fontWeight: 700 }}>Typography preset test fixtures</h1>
@@ -36,7 +40,7 @@ export default function ScreenTypographyTest() {
           fontSize: typography.body.fontSize,
           fontWeight: typography.body.fontWeight,
           lineHeight: typography.body.lineHeight,
-          color: sys.color.onSurface,
+          color: theme?.sys?.onSurface,
         }}
       >
         Element B — all token references. Capture должен сохранить TokenReference объекты,

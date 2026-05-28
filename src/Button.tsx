@@ -1,7 +1,12 @@
-import React from 'react';
-import { sys } from './shared/theme';
+import React, { useContext } from 'react';
+import { ThemeContext } from './shared/theme/model/context/context';
 
 export const Button = (_props: Record<string, unknown>) => {
+  const theme = useContext(ThemeContext);
+  const btnColor = theme?.sys?.primary ?? '#999999';
+  const btnTextColor = theme?.sys?.onPrimary ?? '#111111';
+  const btnSurface = theme?.sys?.surface ?? '#FFFFFF';
+
   return (
       <button
         data-node-id="element-00-button"
@@ -16,10 +21,10 @@ export const Button = (_props: Record<string, unknown>) => {
           justifyContent: "center",
           width: "max-content",
           height: "40px",
-          backgroundColor: sys.color.primary,
-          borderRadius: sys.radius.md,
+          backgroundColor: btnColor,
+          borderRadius: "8px",
           padding: "0 16px",
-          color: sys.color.onPrimary,
+          color: btnTextColor,
           fontSize: "14px",
           lineHeight: "1",
           border: "none"
@@ -34,7 +39,7 @@ export const Button = (_props: Record<string, unknown>) => {
             width: "16px",
             height: "16px",
             borderRadius: "50%",
-            backgroundColor: sys.color.surface
+            backgroundColor: btnSurface
           }}></div>
       </button>
   );
