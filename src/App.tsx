@@ -1,6 +1,6 @@
 import React from 'react';
 import { Providers } from './shared/providers';
-import { Button } from './Button';
+import { Button } from './components/Component-button/Component';
 
 const App = () => (
   <Button />

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from './shared/theme/model/context/context';
+import { ThemeContext } from '../../shared/theme/model/context/context';
 
 export const Button = (_props: Record<string, unknown>) => {
   const theme = useContext(ThemeContext);
