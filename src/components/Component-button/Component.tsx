@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../shared/theme/model/context/context';
 
-export const Button = (_props: Record<string, unknown>) => {
+export const Button = ({ color = '#555555' }: { color: string }) => {
   const theme = useContext(ThemeContext);
   const btnColor = theme?.sys?.primary ?? '#999999';
   const btnTextColor = theme?.sys?.onPrimary ?? '#111111';
