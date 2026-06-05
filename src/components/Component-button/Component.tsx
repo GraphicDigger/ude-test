@@ -9,11 +9,12 @@ export const Button = ({
   variant: 'primary' | 'secondary' | 'danger';
 }) => {
   const theme = useContext(ThemeContext);
-  const variantBg = {
-    primary: theme?.sys?.primary ?? '#2563EB',
-    secondary: '#6B7280',
-    danger: '#DC2626',
-  }[variant];
+  const variantBg =
+    variant === 'primary'
+      ? theme?.sys?.primary ?? '#2563EB'
+      : variant === 'secondary'
+        ? '#6B7280'
+        : '#DC2626';
   const btnTextColor = theme?.sys?.onPrimary ?? '#FFFFFF';
   const btnSurface = theme?.sys?.surface ?? '#FFFFFF';
   void color;
