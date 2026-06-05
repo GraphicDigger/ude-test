@@ -9,10 +9,14 @@ export const Button = ({
   variant: 'primary' | 'secondary' | 'danger';
 }) => {
   const theme = useContext(ThemeContext);
-  const btnColor = theme?.sys?.primary ?? '#999999';
-  const btnTextColor = theme?.sys?.onPrimary ?? '#111111';
+  const variantBg = {
+    primary: theme?.sys?.primary ?? '#2563EB',
+    secondary: '#6B7280',
+    danger: '#DC2626',
+  }[variant];
+  const btnTextColor = theme?.sys?.onPrimary ?? '#FFFFFF';
   const btnSurface = theme?.sys?.surface ?? '#FFFFFF';
-  void variant;
+  void color;
 
   return (
       <button
@@ -28,7 +32,7 @@ export const Button = ({
           justifyContent: "center",
           width: "max-content",
           height: "40px",
-          backgroundColor: btnColor,
+          backgroundColor: variantBg,
           borderRadius: "8px",
           padding: "0 16px",
           color: btnTextColor,
