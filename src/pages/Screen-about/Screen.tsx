@@ -5,7 +5,6 @@ export default function ScreenAbout() {
   const theme = useContext(ThemeContext);
   return (
     <div
-      id="canvas"
       style={{
         width: '100vw',
         height: '100vh',
