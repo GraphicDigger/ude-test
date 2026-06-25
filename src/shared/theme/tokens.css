@@ -15,6 +15,10 @@
   --ref-color-blue: #007aff;
   --ref-color-grey-10: #1d1b20;
   --ref-color-grey-95: #fafafa;
+
+  --ref-size-small: #007aff;
+  --ref-size-medium: #1d1b20;
+  --ref-size-large: #fafafa;
 }
 
 :root,
