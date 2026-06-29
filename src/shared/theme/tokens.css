@@ -3,9 +3,11 @@
  * Структура (M3-inspired, оптимизированная):
  *  - ref tier (`--ref-color-*`): primitives, single-mode (только :root).
  *  - sys tier (`--sys-*`): semantic, multi-mode (:root/light + [data-theme="dark"]/dark).
+ *  - typo tier (`--typo-<preset>-<field>`): typography-пресеты, multi-field +
+ *    breakpoint-group (desktop = база `:root`, tablet/phone — `@media` overrides).
+ *    Консьюмеры читают через `typography.ts`-хелпер (`var(--typo-…)`).
  *
- * Typography / spacing / breakpoints — в `sys.ts` как JS-constants (они не
- * multi-mode и не требуют CSS-vars).
+ * Spacing / прочее — в `sys.ts` как JS-constants (не multi-mode).
  */
 
 :root {
@@ -36,4 +38,26 @@
   --sys-onSurface: var(--ref-color-grey-95);
   --sys-primary: var(--ref-color-blue);
   --sys-onPrimary: var(--ref-color-white);
+}
+
+:root {
+  /* typo — typography presets, multi-field, breakpoint-group БАЗА (desktop).
+     tablet/phone overrides добавляются как `@media (max-width: …) { :root { … } }`
+     визуальным редактором (PresetWriter). collection-scoped: общий `:root` с
+     theme.light не конфликтует (rule.group='breakpoint'). */
+  --typo-body-fontFamily: Inter, sans-serif;
+  --typo-body-fontSize: 16px;
+  --typo-body-fontWeight: 400;
+  --typo-body-lineHeight: 24px;
+
+  --typo-heading-fontFamily: Inter, sans-serif;
+  --typo-heading-fontSize: 24px;
+  --typo-heading-fontWeight: 700;
+  --typo-heading-lineHeight: 24px;
+
+  --typo-caption-fontFamily: Inter, sans-serif;
+  --typo-caption-fontSize: 14px;
+  --typo-caption-fontWeight: 400;
+  --typo-caption-lineHeight: 20px;
+  --typo-caption-marginBottom: 8px;
 }
