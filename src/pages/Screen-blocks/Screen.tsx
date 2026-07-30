@@ -104,8 +104,7 @@ export default function ScreenBlocks() {
                 textDecoration: 'none',
               }}
             >
-              Platform
-              <span style={{ fontSize: '11px', color: onSurfaceSecondary }}>&#9660;</span>
+              Sync Design & Code
             </a>
             <a
               href="/pages/Screen-about"
@@ -118,20 +117,19 @@ export default function ScreenBlocks() {
                 textDecoration: 'none',
               }}
             >
-              Resources
-              <span style={{ fontSize: '11px', color: onSurfaceSecondary }}>&#9660;</span>
+              Design System
             </a>
             <a
               href="/pages/Screen-typography-test"
               style={{ fontSize: '15px', color: onSurface, textDecoration: 'none' }}
             >
-              Customers
+              Wireframes
             </a>
             <a
               href="/pages/Screen-link-examples"
               style={{ fontSize: '15px', color: onSurface, textDecoration: 'none' }}
             >
-              Pricing
+              Database
             </a>
           </nav>
         </div>
@@ -197,7 +195,7 @@ export default function ScreenBlocks() {
             textDecoration: 'none',
           }}
         >
-          GTM lessons from Elena Verna and more
+          A page for demonstrating wireframe blocks
           <span style={{ fontSize: '12px', color: onSurfaceSecondary }}>&#8250;</span>
         </a>
 
@@ -211,7 +209,7 @@ export default function ScreenBlocks() {
             textAlign: 'center',
           }}
         >
-          Welcome to agentic revenue.
+          Wireframe blocks and contexts for agents
         </h1>
 
         <p
@@ -223,7 +221,7 @@ export default function ScreenBlocks() {
             color: onSurfaceSecondary,
           }}
         >
-          Attio is the CRM that builds pipeline, advances deals, and grows accounts around the clock.
+          XLooop is a universal AI-powered design and development environment
         </p>
 
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
@@ -255,7 +253,7 @@ export default function ScreenBlocks() {
               cursor: 'pointer',
             }}
           >
-            Start for free
+            About
           </button>
         </div>
       </section>
