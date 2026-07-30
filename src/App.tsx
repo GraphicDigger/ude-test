@@ -1,9 +1,9 @@
 import React from 'react';
 import { Providers } from './shared/providers';
-import { Button } from './components/Component-button/Component';
+import ScreenBlocks from './pages/Screen-blocks/Screen';
 
 const App = () => (
-  <Button />
+  <ScreenBlocks />
 );
 
 export default Providers(App);
