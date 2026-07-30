@@ -89,7 +89,7 @@ export default function ScreenBlocks() {
                 border: `4px solid ${onSurface}`,
               }}
             />
-            <span style={{ fontSize: '24px', fontWeight: '700', letterSpacing: '-0.02em' }}>attio</span>
+            <span style={{ fontSize: '24px', fontWeight: '700', letterSpacing: '-0.02em' }}>XLooop</span>
           </div>
 
           <nav style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
