@@ -63,7 +63,7 @@ export default function ScreenRepeatTest() {
             }}
           >
             <img
-              src="/vite.svg"
+              src="/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg"
               alt=""
               style={{
                 width: '100%',

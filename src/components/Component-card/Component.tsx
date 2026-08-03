@@ -10,7 +10,7 @@ import { ThemeContext } from '../../shared/theme/model/context/context';
  */
 export const Card = ({
   text = 'Component',
-  image = '/vite.svg',
+  image = '/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg',
   ...rest
 }: {
   text?: string;
