@@ -87,7 +87,9 @@ export default function ScreenRepeatTest() {
             borderRadius: '16px',
           }}
         >
-          <Card />
+          {/* `data-component-id` — canonical id компонента: по нему редактор
+              находит его файл и рисует инстанс, а не пустой тег. */}
+          <Card data-component-id="card" />
         </div>
       </div>
     </div>

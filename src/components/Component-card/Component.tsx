@@ -11,10 +11,11 @@ import { ThemeContext } from '../../shared/theme/model/context/context';
 export const Card = ({
   text = 'Component',
   image = '/vite.svg',
+  ...rest
 }: {
   text?: string;
   image?: string;
-}) => {
+} & React.HTMLAttributes<HTMLDivElement>) => {
   const theme = useContext(ThemeContext);
   const surface = theme?.sys?.surface ?? '#FFFFFF';
   const onSurface = theme?.sys?.onSurface ?? '#111111';
@@ -22,6 +23,7 @@ export const Card = ({
 
   return (
     <div
+      {...rest}
       style={{
         display: 'flex',
         flexDirection: 'column',
