@@ -63,7 +63,7 @@ export default function ScreenRepeatTest() {
             }}
           >
             <img
-              src="/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg"
+              src="https://raw.githubusercontent.com/GraphicDigger/ude-test/main/public/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg"
               alt=""
               style={{
                 width: '100%',

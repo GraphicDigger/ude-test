@@ -4,13 +4,17 @@ import { ThemeContext } from '../../shared/theme/model/context/context';
 /**
  * Карточка: картинка сверху, подпись снизу.
  *
+ * Картинка по абсолютному адресу, а не путём из `public/`: превью экрана живёт
+ * в песочнице редактора, и корневой путь там указывает на его origin, а не на
+ * этот проект — `/файл.jpg` возвращал бы index.html вместо изображения.
+ *
  * Заготовка для проверки повтора по записям: экран `Screen-repeat-test`
  * показывает её дважды — составным элементом и инстансом этого компонента, —
  * чтобы к обеим формам можно было подключить коллекцию и сравнить результат.
  */
 export const Card = ({
   text = 'Component',
-  image = '/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg',
+  image = 'https://raw.githubusercontent.com/GraphicDigger/ude-test/main/public/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg',
   ...rest
 }: {
   text?: string;
