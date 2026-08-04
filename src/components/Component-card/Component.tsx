@@ -31,12 +31,11 @@ export const Card = ({
       style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '12px',
-        width: '220px',
-        padding: '12px',
-        border: `1px solid ${outline}`,
-        borderRadius: '12px',
-        backgroundColor: surface,
+        gap: '20px',
+        width: '250px',
+        padding: '20px',
+        border: '1px solid #f5f5f5',
+        borderRadius: '16px',
       }}
     >
       <img

@@ -18,17 +18,17 @@ export default function ScreenRepeatTest() {
   const outline = theme?.sys?.outline ?? '#E5E5E5';
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', }}>
+    <div style={{ display: 'flex', flexDirection: 'row', gap: '40px', alignItems: 'center', width: '600px'}}>
 
-      <div style={{ display: 'flex', gap: '32px', }}>
+      <div style={{ display: 'flex', gap: '20px', flexDirection: 'column', padding: '20px' }} >
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '12px',
-            width: '220px',
-            padding: '12px',
-            border: `1px solid #f5f5f5`,
+            gap: '20px',
+            width: '250px',
+            padding: '20px',
+            border: '1px solid #f5f5f5',
             borderRadius: '16px',
           }}
         >
@@ -47,7 +47,7 @@ export default function ScreenRepeatTest() {
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '32px' }} >
+      <div style={{ display: 'flex', gap: '20px', flexDirection: 'column' }} >
         {/* `data-component-id` — canonical id компонента: по нему редактор
               находит его файл и рисует инстанс, а не пустой тег. */}
         <Card data-component-id="card" />
