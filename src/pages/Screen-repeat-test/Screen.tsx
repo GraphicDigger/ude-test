@@ -12,13 +12,12 @@ import { Card } from '../../components/Component-card/Component';
  */
 export default function ScreenRepeatTest() {
   const theme = useContext(ThemeContext);
-  const surface = theme?.sys?.surface ?? '#FFFFFF';
   const onSurface = theme?.sys?.onSurface ?? '#111111';
   const onSurfaceSecondary = theme?.sys?.onSurfaceSecondary ?? '#6B7280';
   const outline = theme?.sys?.outline ?? '#E5E5E5';
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', gap: '40px', alignItems: 'center', width: '100%' }}>
+    <div style={{ display: 'flex', gap: '40px', justify-content: 'center', width: '100%', padding: '20px'}}>
 
       <div style={{ display: 'flex', gap: '20px', flexDirection: 'column', padding: '20px', border: '1px dashed #e5e5e5' }}>
         <div
