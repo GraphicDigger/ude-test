@@ -43,7 +43,7 @@ export default function ScreenRepeatTest() {
             gap: '12px',
             width: '220px',
             padding: '12px',
-            border: `1px solid ${outline}`,
+            border: `1px solid #E5E5E5`,
             borderRadius: '12px',
             backgroundColor: surface,
           }}
@@ -68,8 +68,8 @@ export default function ScreenRepeatTest() {
           display: 'flex',
           flexDirection: 'column',
           gap: '16px',
-          padding: '24px',
-          border: `1px dashed ${outline}`,
+          padding: '12px',
+          border: `1px dashed #E5E5E5`,
           borderRadius: '16px',
         }}
       >
