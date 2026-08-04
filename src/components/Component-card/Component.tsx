@@ -34,7 +34,7 @@ export const Card = ({
         gap: '20px',
         width: '250px',
         padding: '20px',
-        border: '1px solid #f5f5f5',
+        border: '1px solid #e5e5e5',
         borderRadius: '16px',
       }}
     >
