@@ -18,20 +18,9 @@ export default function ScreenRepeatTest() {
   const outline = theme?.sys?.outline ?? '#E5E5E5';
 
   return (
-    <div
-      style={{
-        width: '100%',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '32px',
-        padding: '48px 32px',
-        backgroundColor: surface,
-        color: onSurface,
-        fontFamily: 'Inter, system-ui, sans-serif',
-      }}
-    >
+    <div>
       <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
+        
         <div
           style={{
             display: 'flex',
@@ -64,7 +53,7 @@ export default function ScreenRepeatTest() {
           flexDirection: 'column',
           gap: '16px',
           padding: '12px',
-          border: `1px dashed #f5f5f5`,
+          border: `1px solid #f5f5f5`,
           borderRadius: '16px',
         }}
       >
