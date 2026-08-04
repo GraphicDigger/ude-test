@@ -19,32 +19,29 @@ export default function ScreenRepeatTest() {
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
-        
-        <div
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12px',
+          width: '220px',
+          padding: '12px',
+          border: `1px solid #f5f5f5`,
+          borderRadius: '16px',
+        }}
+      >
+        <img
+          src="https://raw.githubusercontent.com/GraphicDigger/ude-test/main/public/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg"
+          alt=""
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '12px',
-            width: '220px',
-            padding: '12px',
-            border: `1px solid #f5f5f5`,
-            borderRadius: '16px',
+            width: '100%',
+            height: '120px',
+            objectFit: 'cover',
+            borderRadius: '8px',
+            backgroundColor: '#F3F4F6',
           }}
-        >
-          <img
-            src="https://raw.githubusercontent.com/GraphicDigger/ude-test/main/public/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg"
-            alt=""
-            style={{
-              width: '100%',
-              height: '120px',
-              objectFit: 'cover',
-              borderRadius: '8px',
-              backgroundColor: '#F3F4F6',
-            }}
-          />
-          <span style={{ fontSize: '15px', lineHeight: '20px', color: onSurface }}>Card is a Composite element</span>
-        </div>
+        />
+        <span style={{ fontSize: '15px', lineHeight: '20px', color: onSurface }}>Card is a Composite element</span>
       </div>
 
       <div
