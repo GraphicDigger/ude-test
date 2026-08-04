@@ -31,10 +31,6 @@ export default function ScreenRepeatTest() {
         fontFamily: 'Inter, system-ui, sans-serif',
       }}
     >
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-        <h1 style={{ fontSize: '32px', fontWeight: '700', letterSpacing: '-0.02em' }}>Repeat test</h1>
-      </div>
-
       <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
         <div
           style={{
@@ -43,9 +39,8 @@ export default function ScreenRepeatTest() {
             gap: '12px',
             width: '220px',
             padding: '12px',
-            border: `1px solid #E5E5E5`,
-            borderRadius: '12px',
-            backgroundColor: surface,
+            border: `1px solid #f5f5f5`,
+            borderRadius: '16px',
           }}
         >
           <img
@@ -69,7 +64,7 @@ export default function ScreenRepeatTest() {
           flexDirection: 'column',
           gap: '16px',
           padding: '12px',
-          border: `1px dashed #E5E5E5`,
+          border: `1px dashed #f5f5f5`,
           borderRadius: '16px',
         }}
       >
