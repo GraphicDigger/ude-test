@@ -13,7 +13,7 @@ import { ThemeContext } from '../../shared/theme/model/context/context';
  * чтобы к обеим формам можно было подключить коллекцию и сравнить результат.
  */
 export const Card = ({
-  text = 'Component',
+  text = 'Card is a Component instance',
   image = 'https://raw.githubusercontent.com/GraphicDigger/ude-test/main/public/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg',
   ...rest
 }: {

@@ -33,10 +33,6 @@ export default function ScreenRepeatTest() {
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
         <h1 style={{ fontSize: '32px', fontWeight: '700', letterSpacing: '-0.02em' }}>Repeat test</h1>
-        <p style={{ fontSize: '16px', lineHeight: '24px', color: onSurfaceSecondary }}>
-          Слева составной элемент, справа инстанс компонента. Подключите коллекцию к любому из
-          контейнеров и сравните результат.
-        </p>
       </div>
 
       <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
@@ -44,53 +40,42 @@ export default function ScreenRepeatTest() {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '16px',
-            padding: '24px',
-            border: `1px dashed ${outline}`,
-            borderRadius: '16px',
+            gap: '12px',
+            width: '220px',
+            padding: '12px',
+            border: `1px solid ${outline}`,
+            borderRadius: '12px',
+            backgroundColor: surface,
           }}
         >
-          <div
+          <img
+            src="https://raw.githubusercontent.com/GraphicDigger/ude-test/main/public/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg"
+            alt=""
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '12px',
-              width: '220px',
-              padding: '12px',
-              border: `1px solid ${outline}`,
-              borderRadius: '12px',
-              backgroundColor: surface,
+              width: '100%',
+              height: '120px',
+              objectFit: 'cover',
+              borderRadius: '8px',
+              backgroundColor: '#F3F4F6',
             }}
-          >
-            <img
-              src="https://raw.githubusercontent.com/GraphicDigger/ude-test/main/public/markus-spiske-pZJ9M8Jxp_o-unsplash.jpg"
-              alt=""
-              style={{
-                width: '100%',
-                height: '120px',
-                objectFit: 'cover',
-                borderRadius: '8px',
-                backgroundColor: '#F3F4F6',
-              }}
-            />
-            <span style={{ fontSize: '15px', lineHeight: '20px', color: onSurface }}>Element</span>
-          </div>
+          />
+          <span style={{ fontSize: '15px', lineHeight: '20px', color: onSurface }}>Card is a Composite element</span>
         </div>
+      </div>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
-            padding: '24px',
-            border: `1px dashed ${outline}`,
-            borderRadius: '16px',
-          }}
-        >
-          {/* `data-component-id` — canonical id компонента: по нему редактор
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+          padding: '24px',
+          border: `1px dashed ${outline}`,
+          borderRadius: '16px',
+        }}
+      >
+        {/* `data-component-id` — canonical id компонента: по нему редактор
               находит его файл и рисует инстанс, а не пустой тег. */}
-          <Card data-component-id="card" />
-        </div>
+        <Card data-component-id="card" />
       </div>
     </div>
   );
