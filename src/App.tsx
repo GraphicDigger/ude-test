@@ -1,9 +1,9 @@
 import React from 'react';
 import { Providers } from './shared/providers';
-import ScreenBlocks from './pages/Screen-blocks/Screen';
+import AppRoutes from './routes';
 
 const App = () => (
-  <ScreenBlocks />
+  <AppRoutes />
 );
 
 export default Providers(App);
