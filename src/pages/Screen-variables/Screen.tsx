@@ -17,7 +17,10 @@ import { useToggle } from '../../shared/hooks/useToggle';
  *  4. ПАРА С ЧУЖИМ ИМЕНЕМ (`tab` / `choose`) — второе имя названо не по
  *     переменной, и трогать его нельзя.
  *  5. ПАРА ИЗ СВОЕГО ХУКА (`flag` / `toggleFlag`) — форма та же, имя вызова
- *     другое: читаться должна одинаково.
+ *     другое: читаться должна одинаково. Само изменение (`toggleFlag()`) наша
+ *     форма НЕ покрывает — оно и должно показываться шагом «код».
+ *  6. ПЕРЕМЕННАЯ ПОД ОДНИМ ДЕРЖАТЕЛЕМ (`counter`) — её держит только действие,
+ *     в разметке её нет: сняли действие, и удаление становится доступным.
  */
 export default function ScreenVariables() {
   const theme = useContext(ThemeContext);
@@ -35,6 +38,9 @@ export default function ScreenVariables() {
   const [tab, choose] = useState('first');
   // 5. Пара из собственного хука проекта.
   const [flag, toggleFlag] = useToggle(false);
+  // 6. Переменную держит ТОЛЬКО действие: в разметке её нет. Сняли действие —
+  //    держателей не осталось, и удалить её можно.
+  const [counter, setCounter] = useState(0);
 
   return (
     <div
@@ -95,6 +101,16 @@ export default function ScreenVariables() {
         style={{ padding: '10px 16px', border: `1px solid ${outline}`, borderRadius: '8px' }}
       >
         Flag is {flag ? 'on' : 'off'}
+      </button>
+
+      {/* Держатель у переменной один — это действие; значение нигде не показано. */}
+      <button
+        onClick={() => {
+          setCounter(1);
+        }}
+        style={{ padding: '10px 16px', border: `1px solid ${outline}`, borderRadius: '8px' }}
+      >
+        Count up
       </button>
 
       {/* Элемент без событий — на нём собирают новое действие с нуля. */}
