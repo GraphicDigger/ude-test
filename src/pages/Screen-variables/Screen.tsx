@@ -93,6 +93,17 @@ export default function ScreenVariables() {
         </button>
       </div>
 
+      {/* Выбор из двух веток: обе — разметка, показана та, чей ответ совпал. */}
+      {tab === 'first' ? (
+        <section style={{ padding: '16px', border: `1px solid ${outline}`, borderRadius: '12px' }}>
+          <p style={{ fontSize: '14px' }}>First tab content.</p>
+        </section>
+      ) : (
+        <section style={{ padding: '16px', border: `1px solid ${outline}`, borderRadius: '12px' }}>
+          <p style={{ fontSize: '14px' }}>Second tab content.</p>
+        </section>
+      )}
+
       {/* Пара из своего хука: показ значения и элемент без действия. */}
       <button
         onClick={() => {
