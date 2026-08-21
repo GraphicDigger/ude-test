@@ -7,6 +7,7 @@ import ScreenBlocks from './pages/Screen-blocks/Screen';
 import ScreenRepeatTest from './pages/Screen-repeat-test/Screen';
 import ScreenRecord from './pages/Screen-record/Screen';
 import ScreenActions from './pages/Screen-actions/Screen';
+import ScreenVariables from './pages/Screen-variables/Screen';
 
 /**
  * Адреса экранов приложения.
@@ -28,6 +29,7 @@ export default function AppRoutes() {
         <Route path="/repeat-test/:recordKey?" element={<ScreenRepeatTest />} />
         <Route path="/record/:recordKey?" element={<ScreenRecord />} />
         <Route path="/actions/:recordKey?" element={<ScreenActions />} />
+        <Route path="/variables/:recordKey?" element={<ScreenVariables />} />
         <Route path="*" element={<p>Page not found</p>} />
       </Routes>
     </BrowserRouter>
