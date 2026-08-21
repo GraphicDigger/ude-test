@@ -114,6 +114,20 @@ export default function ScreenVariables() {
         Flag is {flag ? 'on' : 'off'}
       </button>
 
+      {/* Развилка, написанная руками: конструктор обязан показать обе ветки. */}
+      <button
+        onClick={() => {
+          if (tab === 'first') {
+            choose('second');
+          } else {
+            choose('first');
+          }
+        }}
+        style={{ padding: '10px 16px', border: `1px solid ${outline}`, borderRadius: '8px' }}
+      >
+        Switch tab
+      </button>
+
       {/* Держатель у переменной один — это действие; значение нигде не показано. */}
       <button
         onClick={() => {
