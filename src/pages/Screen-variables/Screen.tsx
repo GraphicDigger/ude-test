@@ -138,6 +138,11 @@ export default function ScreenVariables() {
         Count up
       </button>
 
+      {/* Условие формой шире собираемой: редактор показывает его как код. */}
+      {title.length > 3 && (
+        <p style={{ fontSize: '14px' }}>Shown when the title is long enough.</p>
+      )}
+
       {/* Элемент без событий — на нём собирают новое действие с нуля. */}
       <p style={{ fontSize: '14px' }}>Pick me to build a new action.</p>
     </div>
