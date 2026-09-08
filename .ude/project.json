@@ -52,5 +52,9 @@
   },
   "database": {
     "recordsDir": "src/data/"
+  },
+  "sourceCode": {
+    "mode": "remote-git",
+    "remoteRepoUrl": "https://github.com/GraphicDigger/ude-test"
   }
 }
