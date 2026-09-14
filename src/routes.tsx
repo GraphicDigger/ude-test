@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ScreenHome from './pages/Screen-home/Screen';
 import ScreenAbout from './pages/Screen-about/Screen';
 import ScreenTypographyTest from './pages/Screen-typography-test/Screen';
-import ScreenLinkExamples from './pages/Screen-link-examples/Screen';
 import ScreenBlocks from './pages/Screen-blocks/Screen';
 import ScreenRepeatTest from './pages/Screen-repeat-test/Screen';
 import ScreenRecord from './pages/Screen-record/Screen';
@@ -24,7 +23,6 @@ export default function AppRoutes() {
         <Route path="/home/:recordKey?" element={<ScreenHome />} />
         <Route path="/about/:recordKey?" element={<ScreenAbout />} />
         <Route path="/typography-test/:recordKey?" element={<ScreenTypographyTest />} />
-        <Route path="/link-examples/:recordKey?" element={<ScreenLinkExamples />} />
         <Route path="/blocks/:recordKey?" element={<ScreenBlocks />} />
         <Route path="/repeat-test/:recordKey?" element={<ScreenRepeatTest />} />
         <Route path="/record/:recordKey?" element={<ScreenRecord />} />
