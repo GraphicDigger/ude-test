@@ -2,40 +2,70 @@
   "version": "0.1.0",
   "projectRoot": ".",
   "fileRoles": {},
-  "dataFileRoles": {},
   "themeContext": {
     "importSpec": {
       "source": "@/shared/theme/model/context/context",
       "name": "ThemeContext"
     },
     "defaultVarName": "theme",
-    "source": { "kind": "css-vars", "file": "src/shared/theme/tokens.css" },
+    "source": {
+      "kind": "css-vars",
+      "file": "src/shared/theme/tokens.css"
+    },
     "modeGroups": [
       {
         "id": "theme",
-        "type": "theme",
         "isGlobal": true,
-        "defaultMode": "light",
         "modes": [
-          { "id": "light", "label": "light", "selector": ":root" },
-          { "id": "dark", "label": "dark", "selector": "[data-theme='dark']" }
-        ]
+          {
+            "id": "light",
+            "selector": ":root",
+            "label": "light"
+          },
+          {
+            "id": "dark",
+            "selector": "[data-theme='dark']",
+            "label": "dark"
+          }
+        ],
+        "defaultMode": "light",
+        "type": "theme"
       },
       {
         "id": "breakpoint",
-        "type": "breakpoint",
         "isGlobal": true,
-        "defaultMode": "desktop",
         "modes": [
-          { "id": "desktop", "label": "desktop", "selector": ":root" },
-          { "id": "tablet", "label": "tablet", "selector": "@media (max-width: 1023px)" },
-          { "id": "phone", "label": "phone", "selector": "@media (max-width: 640px)" }
-        ]
+          {
+            "id": "desktop",
+            "selector": ":root",
+            "label": "desktop"
+          },
+          {
+            "id": "tablet",
+            "selector": "@media (max-width: 1023px)",
+            "label": "tablet"
+          },
+          {
+            "id": "phone",
+            "selector": "@media (max-width: 640px)",
+            "label": "phone"
+          }
+        ],
+        "defaultMode": "desktop",
+        "type": "breakpoint"
       }
     ],
     "collectionRules": [
-      { "prefix": "--ref-color-", "collectionName": "ref-colors", "kind": "tokens" },
-      { "prefix": "--sys-", "collectionName": "sys", "kind": "tokens" },
+      {
+        "prefix": "--ref-color-",
+        "collectionName": "ref-colors",
+        "kind": "tokens"
+      },
+      {
+        "prefix": "--sys-",
+        "collectionName": "sys",
+        "kind": "tokens"
+      },
       {
         "prefix": "--typo-",
         "collectionName": "typography",
@@ -46,15 +76,36 @@
     ]
   },
   "parsingRules": {
-    "autoLoad": ["src/shared/theme/tokens.css"],
+    "autoLoad": [
+      "src/shared/theme/tokens.css"
+    ],
     "exclude": [],
-    "priority": ["src/shared/theme/tokens.css"]
+    "priority": [
+      "src/shared/theme/tokens.css"
+    ]
   },
-  "database": {
-    "recordsDir": "src/data/"
+  "codegenRules": {
+    "formatting": "prettier",
+    "importStyle": "named"
+  },
+  "dependencies": {
+    "graph": false,
+    "autoUpdate": false
   },
   "sourceCode": {
     "mode": "remote-git",
     "remoteRepoUrl": "https://github.com/GraphicDigger/ude-test"
-  }
+  },
+  "codeEditor": {
+    "editor": "monaco"
+  },
+  "platform": "web",
+  "database": {
+    "recordsDir": "src/data/"
+  },
+  "navigation": {
+    "form": "react-router",
+    "routesPath": "src/routes.tsx"
+  },
+  "dataFileRoles": {}
 }
