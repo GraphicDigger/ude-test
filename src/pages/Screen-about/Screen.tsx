@@ -18,7 +18,7 @@ export default function ScreenAbout() {
         color: theme?.sys?.onSurface ?? '#111111',
       }}
     >
-      <h1 style={{ fontSize: '28px', fontWeight: '700' }}>About</h1>
+      <h1 style={{ fontSize: '28px', fontWeight: '700' }}>Aboutttвава</h1>
       <p style={{ fontSize: '14px', lineHeight: '20px' }}>
         Sibling screen for testing multi-screen routing. Edit text, layout, fill — focus persists.
       </p>

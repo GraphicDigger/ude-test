@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "collections": [
+    {
+      "id": "4c2e9c23-9c61-4aa6-922e-0e691da1d4c2",
+      "name": "newModel",
+      "label": "New Collection"
+    }
+  ],
+  "fields": [
+    {
+      "id": "name-4c2e9c23-9c61-4aa6-922e-0e691da1d4c2",
+      "collectionId": "4c2e9c23-9c61-4aa6-922e-0e691da1d4c2",
+      "name": "name",
+      "label": "Name",
+      "type": "text",
+      "isRequired": true,
+      "isSystem": true,
+      "settings": {
+        "helpText": "",
+        "minLength": 0,
+        "maxLength": 0
+      }
+    },
+    {
+      "id": "slug-4c2e9c23-9c61-4aa6-922e-0e691da1d4c2",
+      "collectionId": "4c2e9c23-9c61-4aa6-922e-0e691da1d4c2",
+      "name": "slug",
+      "label": "Slug",
+      "type": "text",
+      "isRequired": true,
+      "isSystem": true,
+      "settings": {
+        "helpText": "",
+        "minLength": 0,
+        "maxLength": 0
+      }
+    }
+  ],
+  "layout": {}
+}
